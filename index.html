@@ -344,26 +344,19 @@
 
   /* ── RESPONSIVE — mobile ── */
   @media (max-width: 720px) {
-    /* Nav: stack logo above scrollable links */
     nav .inner {
-      flex-direction: column;
       height: auto;
       padding: 10px 16px;
-      gap: 8px;
+      flex-wrap: wrap;
+      gap: 6px;
     }
     nav .logo { font-size: 15px; }
     nav .links {
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      flex-wrap: nowrap;
+      flex-wrap: wrap;
       justify-content: flex-start;
       gap: 2px;
-      padding-bottom: 2px;
-      scrollbar-width: none;
     }
-    nav .links::-webkit-scrollbar { display: none; }
-    nav .links a { padding: 5px 8px; font-size: 12px; flex-shrink: 0; }
+    nav .links a { padding: 5px 8px; font-size: 12px; }
 
     /* Hero */
     .hero { grid-template-columns: 1fr; justify-items: center; text-align: center; padding-top: 36px; }
