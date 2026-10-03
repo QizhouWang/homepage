@@ -48,13 +48,14 @@
     max-width: var(--max-w);
     margin: 0 auto;
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 24px; height: 56px;
+    padding: 0 24px; height: 56px; gap: 20px;
   }
   nav .logo {
     font-weight: 700; font-size: 17px; color: var(--text);
     text-decoration: none; letter-spacing: -0.3px;
+    white-space: nowrap; flex-shrink: 0;
   }
-  nav .links { display: flex; gap: 4px; flex-wrap: wrap; justify-content: flex-end; }
+  nav .links { display: flex; gap: 4px; flex-wrap: nowrap; justify-content: flex-start; min-width: 0; overflow-x: auto; }
   nav .links a {
     font-size: 13px; font-weight: 500;
     color: var(--text-secondary);
@@ -349,12 +350,12 @@
     nav .inner {
       height: auto;
       padding: 10px 16px;
-      flex-wrap: wrap;
-      gap: 6px;
+      flex-wrap: nowrap;
+      gap: 12px;
     }
     nav .logo { font-size: 15px; }
     nav .links {
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: flex-start;
       gap: 2px;
     }
@@ -379,7 +380,7 @@
 <!-- ── NAVIGATION ── -->
 <nav>
   <div class="inner">
-    <a class="logo" href="#">Welcome, My Friend!</a>
+    <a class="logo" href="#">Welcome</a>
     <div class="links">
       <a onclick="document.getElementById('news').scrollIntoView({behavior:'smooth'})">News</a>
       <a onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})">Experience</a>
